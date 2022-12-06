@@ -2,13 +2,31 @@ public class Dragon {
     private int health;
     private int strength;
     private int level;
+
     private boolean dead;
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public boolean isDead() {
+        return dead;
+    }
 
     public Dragon(){
         health = 100;
         strength = 1;
         level = 1;
         dead = false;
+
     }
 
     public String takeDamage(int hit){
@@ -26,11 +44,25 @@ public class Dragon {
 
     }
 
+
     public int attack(){
-         int damage = strength * level;
+        int damage = strength * level;
+        int temp = damage;
         System.out.println( "The dragon attacks for " + damage + " health points!");
+        if()
+
         return damage;
     }
 
-    public String
+    public void powerUp(int num){
+        if(num == 1){
+            health = health * 2;
+            System.out.println("Dragon's health have been increased to " + health);
+        }
+        if(num == 2){
+            strength = strength * 2;
+            System.out.println("Dragon's strength have been increased to " + strength);
+        }
+    }
+
 }
