@@ -49,8 +49,11 @@ public class Dragon {
         int damage = strength * level;
         int temp = damage;
         System.out.println( "The dragon attacks for " + damage + " health points!");
-        if()
-
+        temp = damage + temp;
+        if(temp >= 50){
+            level ++;
+            temp = 0;
+        }
         return damage;
     }
 
@@ -65,4 +68,8 @@ public class Dragon {
         }
     }
 
+    public String toString(){
+        return "dragon:\n Strength = " + strength + "\nHealth = " + health + "\nLevel = " + level +  "\nDead = " + dead + "\nAttack Damage = " + strength * level;
+
+    }
 }
